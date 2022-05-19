@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "noStrictGenericChecks": true,
+    "lib": ["es2016", "dom"],
+    "outDir": "../out-tsc/app",
+    "target": "es5",
+    "module": "commonjs",
+    "baseUrl": "",
+    "rootDir": "./",
+    "strict": true,
+    "paths": {
+      "@ngrx/effects": ["./modules/effects"],
+      "@ngrx/effects/testing": ["./modules/effects/testing"],
+      "@ngrx/effects/schematics-core": ["./modules/effects/schematics-core"],
+      "@ngrx/store": ["./modules/store"],
+      "@ngrx/store/schematics-core": ["./modules/store/schematics-core"],
+      "@ngrx/store-devtools": ["./modules/store-devtools"],
+      "@ngrx/store-devtools/schematics-core": [
+        "./modules/store-devtools/schematics-core"
+      ],
+      "@ngrx/router-store": ["./modules/router-store"],
+      "@ngrx/router-store/schematics-core": [
+        "./modules/router-store/schematics-core"
+      ],
+      "@ngrx/entity": ["./modules/entity"],
+      "@ngrx/entity/schematics-core": ["./modules/entity/schematics-core"],
+      "@ngrx/schematics": ["./modules/schematics"],
+      "@ngrx/schematics/schematics-core": [
+        "./modules/schematics/schematics-core"
+      ]
+    }
+  },
+  "exclude": [
+    "bazel-out",
+    "dist",
+    "node_modules",
+    "**/*/node_modules",
+    "modules/schematics/src/*/files/**/*"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "bazelOptions": {
+    "suppressTsconfigOverrideWarnings": true
+  }
+}
